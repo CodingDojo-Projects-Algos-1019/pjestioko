@@ -27,21 +27,37 @@
 
 // REMOVE AT
 
-let arr = [1, 2, 3, 4, 5];
-function removeAt(arr, position) {
-    var val = arr[position];
+// let arr = [1, 2, 3, 4, 5];
+// function removeAt(arr, position) {
+//     var val = arr[position];
   
-    for (var index = position; index < arr.length - 1; index++) {
-      var currentValue = arr[index + 1];
+//     for (var index = position; index < arr.length - 1; index++) {
+//       var currentValue = arr[index + 1];
   
-      arr[index] = currentValue;
+//       arr[index] = currentValue;
+//     }
+  
+//     arr.length--;
+//     console.log('removing ', arr, val);
+  
+//     return val;
+//   }
+  
+  
+//   console.log(removeAt(arr, 4));
+
+// SWAP PAIRS
+
+let arr = [1,2,3,4];
+function swapPairs(arr){
+    for (index = 0; index < arr.length-1; index+=2){
+        var currentValue = arr[index];
+        arr[index] = arr[index + 1];
+        arr[index+1] = currentValue;
     }
-  
-    arr.length--;
-    console.log('removing ', arr, val);
-  
-    return val;
-  }
-  
-  
-  console.log(removeAt(arr, 4));
+    return arr;
+}
+var testArray = [1,2,3,4];
+console.log(swapPairs(testArray))
+var testArray = ["Brendan",true,42];
+console.log(swapPairs(testArray));
