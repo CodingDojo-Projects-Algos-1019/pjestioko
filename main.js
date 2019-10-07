@@ -13,14 +13,35 @@
 
 // POP FRONT
 
+// let arr = [1, 2, 3, 4, 5];
+// function popFront(arr) {
+//     var val = arr[0];
+//     for (var index = 0; index < arr.length - 1; index++) {
+//         var currentValue = arr[index + 1];
+//         arr[index] = currentValue;
+//     }
+//     arr.length -= 1;
+//     console.log(arr);
+// }
+// console.log(popFront(arr));
+
+// REMOVE AT
+
 let arr = [1, 2, 3, 4, 5];
-function popFront(arr) {
-    var val = arr[0];
-    for (var index = 0; index < arr.length - 1; index++) {
-        var currentValue = arr[index + 1];
-        arr[index] = currentValue;
+function removeAt(arr, position) {
+    var val = arr[position];
+  
+    for (var index = position; index < arr.length - 1; index++) {
+      var currentValue = arr[index + 1];
+  
+      arr[index] = currentValue;
     }
-    arr.length -= 1;
-    console.log(arr);
-}
-console.log(popFront(arr));
+  
+    arr.length--;
+    console.log('removing ', arr, val);
+  
+    return val;
+  }
+  
+  
+  console.log(removeAt(arr, 4));
